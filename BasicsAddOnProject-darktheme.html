@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>🥗Cooking-My Hobby</title>
+    <style>
+      body {
+        background: linear-gradient(
+          94.5deg,
+          rgb(255, 235, 104) -1.2%,
+          rgb(61, 247, 255) 119.2%
+        );
+      }
+      h1 {
+        text-align: center;
+        font-family: cursive;
+      }
+      h2 {
+        text-align: center;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+      }
+      p {
+        font-size: 20px;
+        line-height: 2;
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS",
+          sans-serif;
+      }
+      .container {
+        background: white;
+        max-width: 100%;
+        padding: 20px;
+        border-radius: 20px;
+        margin: 60px 300px;
+      }
+      .themeButton {
+        background-color: black;
+        color: white;
+        display: block;
+        margin: 0 auto;
+        border: darkcyan;
+        border-radius: 25px;
+        font-size: 20px;
+        padding: 15px 40px;
+      }
+      .themeButton:hover {
+        background-color: white;
+        cursor: pointer;
+      }
+      button {
+        background-color: green;
+        color: white;
+        display: block;
+        margin: 0 auto;
+        border-color: 2px darkcyan;
+        font-size: 20px;
+        border-radius: 25px;
+        transition: all 200ms ease;
+      }
+      button:hover {
+        background-color: cadetblue;
+        cursor: pointer;
+      }
+      img {
+        max-width: 100%;
+      }
+      .mainPicture {
+        border-radius: 15px;
+        transition: opacity 150ms ease-in-out;
+      }
+      .mainPicture:hover {
+        transform: scale(0.95);
+        cursor: pointer;
+      }
+      .grid {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 25px;
+      }
+      .grid img {
+        width: 100%;
+        object-fit: cover;
+        aspect-ratio: 1/1.5;
+        border-radius: 15px;
+      }
+      .Must-Try {
+        font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS";
+        font-weight: 200;
+        color: black;
+      }
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 20px;
+      }
+      .dark {
+        background: black;
+        color: white;
+      }
+      .dark .container {
+        background: rgba(255, 255, 255, 0.1);
+      }
+      .dark .a {
+        color: green;
+      }
+      .dark .Must-Try {
+        color: white;
+      }
+      .dark .themeButton {
+        color: white;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="themeButton">Change Theme</button>
+    <div class="container">
+      <h1>Cooking Thai Food</h1>
+      <h2>My Favorite Hobby</h2>
+      <a
+        href="https://thebear.travel/503/Experience-Thai-Cuisine:-Top-10-Must-Try-Dishes-in-Thailand"
+        target="_blank"
+      >
+        <img
+          src="https://asianinspirations.com.au/wp-content/uploads/2020/02/ThaiIngredients_FeatImg.jpg"
+          alt="Ingredients"
+          class="mainPicture"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://hot-thai-kitchen.com/wp-content/uploads/2013/03/tom-yum-goong-blog.jpg"
+          alt="TomYum"
+        />
+        <img
+          src="https://cdn.loveandlemons.com/wp-content/uploads/2023/05/fresh-spring-rolls.jpg"
+          alt="SpringRolls"
+        />
+        <img
+          src="https://img77.uenicdn.com/image/upload/v1684866693/business/015a869d-d333-4348-aa40-fa3fc741e9a8.jpg"
+          alt="ThaiFood"
+        />
+        <img
+          src="https://inquiringchef.com/wp-content/uploads/2023/02/Authentic-Pad-Thai-1923-1.jpg"
+          alt="Pad Thai"
+        />
+      </div>
+      <p>
+        Cooking is an enjoyable activity that I love because it allows me to
+        focus on the task at hand and express my creativity. When I cook, I
+        don't think about anything else; I am fully immersed in the
+        process—whether it's chopping, grilling, or cleaning. I also enjoy
+        experimenting with the ingredients I have in my fridge to create new
+        dishes and flavors that I love. Above all, cooking is my way of showing
+        love to my family and friends. I take great pleasure in preparing meals
+        for them and seeing their smiles as they enjoy my food.
+      </p>
+      <a
+        href="https://thebear.travel/503/Experience-Thai-Cuisine:-Top-10-Must-Try-Dishes-in-Thailand"
+        target="_blank"
+        class="Must-Try"
+        >Must-Try Thai Dishes</a
+      >
+      <button>🍲Thai Cooking Course</button>
+    </div>
+    <footer>
+      Coded by 👩🏻<a href="https://www.linkedin.com/in/apitha-joy/"
+        >Apitha Seetalaratsamee</a
+      >
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        if (body.classList.contains("dark")) {
+          body.classList.remove("dark");
+        } else {
+          body.classList.add("dark");
+        } // Adds dark theme class
+      }
+      let themeButton = document.querySelector(".themeButton");
+      themeButton.addEventListener("click", changeTheme);
+    </script>
+  </body>
+</html>
